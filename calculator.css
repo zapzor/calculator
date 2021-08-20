@@ -28,14 +28,13 @@ body {
 #display {
     position: absolute;
     left: 41%;
-    top: 18%;
+    top: 19%;
     width: 400px;
     height: 40px;
     border-color: gray;
     border-width: 3px;
     border-style: solid;
     text-align: center;
-
 }
 
 #content {

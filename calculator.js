@@ -15,6 +15,7 @@ plus = document.querySelector('#plus')
 subtract = document.querySelector('#subtract')
 multiply = document.querySelector('#multiply')
 divide = document.querySelector('#divide')
+equals = document.querySelector('#equals')
 
 display = document.querySelector('#display')
 divContent = document.querySelector('#content')
@@ -30,74 +31,85 @@ eight.addEventListener('click', screen)
 nine.addEventListener('click', screen)
 zero.addEventListener('click', screen)
 
-plus.addEventListener('click', addNumber);
+add.addEventListener('click', addNumber);
 subtract.addEventListener('click', subtractNumber);
 multiply.addEventListener('click', multiplyNumber);
 divide.addEventListener('click', divideNumber);
+divide.addEventListener('click', operate);
 
 //Create functions that take input and output sum depending on function used.
 
-function addNumber(a, b) {
-   divContent.textContent = '+';
-   return a + b;
-}
-
-function subtractNumber(a, b) {
+function addNumber(arr) {
+    return arr.reduce((total, current) => current + total, 0);
+;}
+function subtractNumber(array) {
    divContent.textContent = '-'
-   return a + b;
-}
- 
-function multiplyNumber(a, b) {
+   return array.reduce((total, current) => total - current, 0)
+;}
+function multiplyNumber(array) {
     divContent.textContent = '*'
-    return a * b;
-}
-
-function divideNumber(a, b) {
+    return array.reduce((total, current) => total * current, 1)
+;}
+function divideNumber(array) {
     divContent.textContent = '÷'
-    return a / b;
-} 
+    return array.reduce((total, current) => current / total, 1)
+;} 
 
 //Create function that takes one of the above functions and uses it on a parameter
 
-function operate(a, b) {
+function operate(arr) {
     addNumber(a,b)
     subtractNumber(a,b)
     multiplyNumber(a,b)
     divideNumber(a,b)
-}
+;}
 
 //Create function that populates display when clicking buttons
 
 function screen() {
 one.addEventListener('click', () => {
     divContent.textContent = '1' 
+    firstNumber = 1
 })
 two.addEventListener('click', () => {
     divContent.textContent = '2' 
+    firstNumber = 2
 })
 three.addEventListener('click', () => {
-    divContent.textContent = '3' 
+    divContent.textContent = '3'
+    firstNumber = 3
 })
 four.addEventListener('click', () => {
-    divContent.textContent = '4' 
+    divContent.textContent = '4'
+    firstNumber = 4 
 })
 five.addEventListener('click', () => {
     divContent.textContent = '5'
-     
+    firstNumber = 5
 })
 six.addEventListener('click', () => {
-    divContent.textContent = '6' 
+    divContent.textContent = '6'
+    firstNumber = 6
 })
 seven.addEventListener('click', () => {
-    divContent.textContent = '7' 
+    divContent.textContent = '7'
+    firstNumber = 7
 })
 eight.addEventListener('click', () => {
-    divContent.textContent = '8' 
+    divContent.textContent = '8'
+    firstNumber = 8
 })
 nine.addEventListener('click', () => {
-    divContent.textContent = '9' 
+    divContent.textContent = '9'
+    firstNumber = 9
 })
 zero.addEventListener('click', () => {
     divContent.textContent = '0' 
+    firstNumber = 0
 })
+}
+
+//Function that takes user input and sends it to operator
+function firstNumber(num) {
+
 }
