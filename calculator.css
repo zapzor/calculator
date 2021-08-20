@@ -24,3 +24,21 @@ body {
     width: 400px;
     height: 50px;
 }
+
+#display {
+    position: absolute;
+    left: 41%;
+    top: 18%;
+    width: 400px;
+    height: 40px;
+    border-color: gray;
+    border-width: 3px;
+    border-style: solid;
+    text-align: center;
+
+}
+
+#content {
+    position: relative;
+    top: 30%;
+}
