@@ -26,6 +26,7 @@ body {
 }
 
 #display {
+    display: block;
     position: absolute;
     left: 41%;
     top: 19%;
@@ -38,6 +39,11 @@ body {
 }
 
 #content {
+    display: block;
     position: relative;
     top: 30%;
+}
+
+#lol {
+    position: absolute;
 }
