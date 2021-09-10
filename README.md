@@ -1,1 +1,1 @@
-This will be a calculator. Hopefully it goes well :)
+Calculator built with HTML, CSS and JS. Currently unfinished.
