@@ -1,8 +1,8 @@
 //Buttons and vars
 let bigArray = [];
 operator = '';
-a = 0
-b = 0
+let a = 0
+let b = 0
 
 one = document.querySelector('#one');
 two = document.querySelector('#two');
@@ -48,48 +48,58 @@ divide.addEventListener('click', () => {
  //Number buttons
 one.addEventListener('click', () => {
     divContent.textContent = '1';
-    operator === '' ? a = 1 : b = 1;
+    bigArray = 1
+    operator === '' ? a += 1 : b += 1;
+
 ;})
 two.addEventListener('click', () => {
-    divContent.textContent = '1';
-    operator === '' ? a = 2 : b = 2;
+    divContent.textContent = '2';
+    operator === '' ? a += 2 : b += 2;
+
 ;})
 three.addEventListener('click', () => {
-    divContent.textContent = '1';
-    operator === '' ? a = 3 : b = 3;
+    divContent.textContent = '3';
+    operator === '' ? a += 3 : b += 3;
+
 ;})
 four.addEventListener('click', () => {
-    divContent.textContent = '1';
-    operator === '' ? a = 4 : b = 4;
+    divContent.textContent = '4';
+    operator === '' ? a += 4 : b += 4;
+
 ;})
 five.addEventListener('click', () => {
-    divContent.textContent = '1';
-    operator === '' ? a = 5 : b = 5;
+    divContent.textContent = '5';
+    operator === '' ? a += 5 : b += 5;
+
 ;})
 six.addEventListener('click', () => {
-    divContent.textContent = '1';
-    operator === '' ? a = 6 : b = 6;
+    divContent.textContent = '6';
+    operator === '' ? a += 6 : b += 6;
+
 ;})
 seven.addEventListener('click', () => {
-    divContent.textContent = '1';
-    operator === '' ? a = 7 : b = 7;
+    divContent.textContent = '7';
+    operator === '' ? a += 7 : b += 7;
+
 ;})
 eight.addEventListener('click', () => {
-    divContent.textContent = '1';
-    operator === '' ? a = 8 : b = 8;
+    divContent.textContent = '8';
+    operator === '' ? a += 8 : b += 8;
+
 ;})
 nine.addEventListener('click', () => {
-    divContent.textContent = '1';
-    operator === '' ? a = 9 : b = 9;
+    divContent.textContent = '9';
+    operator === '' ? a += 9 : b += 9;
+
 ;})
 zero.addEventListener('click', () => {
-    divContent.textContent = '1';
-    operator === '' ? a = 0 : b = 0;
+    divContent.textContent = '0';
+    operator === '' ? a += 0 : b += 0;
+
 ;})
 
 
 //Create functions that take input and output sum depending on function used.
-
 function addNumber() {
     return a + b
 ;}
@@ -104,7 +114,6 @@ function divideNumber() {
 ;} 
 
 //Create function that takes one of the above functions and uses it on a parameter
-
 function operate() {
     switch(operator) { 
     case '+':
